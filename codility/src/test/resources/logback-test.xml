@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="3 seconds">
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <pattern>[%thread] %highlight(%-5level)- %class{0}.%M [%L] | %msg%n</pattern>
+    </layout>
+  </appender>
+
+  <logger name="com.nifelee" level="trace"/>
+
+  <root level="DEBUG">
+    <appender-ref ref="console"/>
+  </root>
+
+</configuration>
