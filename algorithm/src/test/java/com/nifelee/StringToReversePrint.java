@@ -30,12 +30,13 @@ public class StringToReversePrint {
     Assertions.assertThat(result).isEqualTo(this.result);
   }
 
+  //O(n/2)
   @Test
   public void stringToReversePrint3() {
     char[] chars = str.toCharArray();
     char temp;
 
-    for (int i=0; i<chars.length / 2; i++) {
+    for (int i=0; i<chars.length/2; i++) {
       temp = chars[i];
       chars[i] = chars[chars.length - i - 1];
       chars[chars.length - i - 1] = temp;

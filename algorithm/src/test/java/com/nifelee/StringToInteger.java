@@ -30,7 +30,7 @@ public class StringToInteger {
 
     for (char c : strArr) {
       result *= 10;
-      result += c - '0';
+      result += c - '0'; //0:48
     }
 
     Assertions.assertThat(result).isEqualTo(this.result);
