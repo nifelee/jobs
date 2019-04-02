@@ -1,4 +1,4 @@
-package com.nifelee;
+package com.nifelee.stirng;
 
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;

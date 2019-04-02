@@ -1,4 +1,4 @@
-package com.nifelee;
+package com.nifelee.stirng;
 
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
@@ -15,7 +15,7 @@ import java.util.Map;
 public class StringAnagram {
 
   @Test
-  public void anagram() {
+  public void test() {
     Assertions.assertThat(isAnagram("rca", "car")).isTrue();
 
     Assertions.assertThat(isAnagram("rca", "carr")).isFalse();

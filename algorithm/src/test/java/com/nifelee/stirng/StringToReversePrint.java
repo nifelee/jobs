@@ -1,4 +1,4 @@
-package com.nifelee;
+package com.nifelee.stirng;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
