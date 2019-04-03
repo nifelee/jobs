@@ -14,7 +14,7 @@ import org.junit.Test;
  * - 최악 시간 복잡도 : O(n^2), 입력 자료 역순
  * - 최선 시간 복잡도 : O(n), 이미 정렬
  * - 평균 시간 복잡도 : O(n^2)
- * - 시간 복잡도 : O(n)
+ * - 공간 복잡도 : O(n)
  */
 @Slf4j
 public class InsertionSort {

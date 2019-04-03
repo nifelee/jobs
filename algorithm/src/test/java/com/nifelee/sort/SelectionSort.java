@@ -15,7 +15,7 @@ import org.junit.Test;
  * - 최악 시간 복잡도 : O(n^2) 비교, O(n) 교환
  * - 최선 시간 복잡도 : O(n^2) 비교, O(n) 교환
  * - 평균 시간 복잡도 : O(n^2) 비교, O(n) 교환
- * - 공간 복잡도 : O(1) 예비
+ * - 공간 복잡도 : O(n)
  */
 @Slf4j
 public class SelectionSort {

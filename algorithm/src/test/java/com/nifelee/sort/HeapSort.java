@@ -16,9 +16,9 @@ import org.junit.Test;
  * - Max Heapify
  * : root node가 child node보다 작으면 두 개의 child node 중 큰 node와 root node를 교체
  *
- * - 최악 시간 복잡도 : O(n log n)
+ * - 최악 시간 복잡도 : O(n)
  * - 최선 시간 복잡도 : O(n log n)
- * - 평균 시간 복잡도 : O(n log n)
+ * - 평균 시간 복잡도
  * - 공간 복잡도 : O(1)
  */
 @Slf4j
@@ -45,8 +45,6 @@ public class HeapSort {
     for (int i = length / 2; i >= 0; i--) {
       maxHeapify(arr, length, i);
     }
-
-    log.debug("");
 
     //extract max element from heap
     for (int i = length - 1; i > 0; i--) {
