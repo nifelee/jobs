@@ -56,6 +56,7 @@ public class RecursionExample {
   //이진 검색 (정렬)
   @Test
   public void binarySearch() {
+    //int[] data = {1, 2, 3, 4, 5, 6, 7, 8};
     int[] data = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     int result = binarySearch(data, 7, 0, data.length - 1);
     Assertions.assertThat(result).isEqualTo(6);
@@ -81,8 +82,9 @@ public class RecursionExample {
   //배열에서 찾고자 하는 값의 인덱스 찾기
   @Test
   public void search() {
+    //int[] data = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     int[] data = {1, 6, 3, 4, 5, 8, 2, 7};
-    int result = search(data, 0, data.length, 3);
+    int result = search(data, 0, data.length - 1, 3);
     Assertions.assertThat(result).isEqualTo(2);
   }
 

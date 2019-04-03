@@ -14,14 +14,15 @@ public class MazeByRecursion {
   private static final int PATH_COLOR = 3;    //green
 
   private static int[][] maze = {
-      {0, 0, 0, 0, 0, 0, 0, 1},
-      {0, 1, 1, 0, 1, 1, 0, 1},
-      {0, 0, 0, 1, 0, 0, 0, 1},
-      {0, 1, 0, 0, 1, 1, 0, 0},
-      {0, 1, 1, 1, 0, 0, 1, 1},
-      {0, 1, 0, 0, 0, 1, 0, 1},
-      {0, 0, 0, 1, 0, 0, 0, 1},
-      {0, 1, 1, 1, 0, 1, 0, 0}
+     //0  1  2  3  4  5  6  7
+      {0, 0, 0, 0, 0, 0, 0, 1}, //0
+      {0, 1, 1, 0, 1, 1, 0, 1}, //1
+      {0, 0, 0, 1, 0, 0, 0, 1}, //2
+      {0, 1, 0, 0, 1, 1, 0, 0}, //3
+      {0, 1, 1, 1, 0, 0, 1, 1}, //4
+      {0, 1, 0, 0, 0, 1, 0, 1}, //5
+      {0, 0, 0, 1, 0, 0, 0, 1}, //6
+      {0, 1, 1, 1, 0, 1, 0, 0}  //7
   };
 
   private boolean findPath(int x, int y) {
@@ -35,7 +36,8 @@ public class MazeByRecursion {
     } else {
       maze[x][y] = PATH_COLOR;
 
-      if (findPath(x-1, y) || findPath(x, y+1) || findPath(x+1, y) || findPath(x, y-1))
+      if (findPath(x - 1, y) || findPath(x + 1, y) ||
+          findPath(x, y + 1) || findPath(x, y - 1))
         return true;
 
       maze[x][y] = BLOCKED_COLOR;
