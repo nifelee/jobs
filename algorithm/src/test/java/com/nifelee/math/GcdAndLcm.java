@@ -57,10 +57,11 @@ public class GcdAndLcm {
     if (val1 < 0 || val2 < 0)
       return -1;
 
-    if (val1 % val2 == 0)
+    if (val1 % val2 == 0) {
       return val2;
-    else
+    } else {
       return getGcdByRecursion(val2, val1 % val2);
+    }
   }
 
   /**
