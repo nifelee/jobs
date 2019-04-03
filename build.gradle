@@ -1,16 +1,5 @@
-/*
 plugins {
   id 'java'
-}
-*/
-
-buildscript {
-  repositories {
-    mavenCentral()
-  }
-  ext {
-    lombokVersion = '1.18.6'
-  }
 }
 
 subprojects {
@@ -42,8 +31,8 @@ subprojects {
 
   dependencies {
     //lombok
-    compile "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compile "org.projectlombok:lombok:1.18.6"
+    annotationProcessor "org.projectlombok:lombok:1.18.6"
 
     compile 'org.slf4j:slf4j-api:1.7.26'
     compile 'ch.qos.logback:logback-classic:1.2.3'
