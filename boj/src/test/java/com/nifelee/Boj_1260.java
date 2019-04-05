@@ -1,7 +1,6 @@
 package com.nifelee;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -22,27 +21,27 @@ import java.util.Scanner;
  * V부터 방문된 점을 순서대로 출력하면 된다.
  */
 @Slf4j
-public class Boj1260 {
+public class Boj_1260 {
 
   private static int V;
-  private static int E;
   private static int[][] graph;
   private static boolean[] visited;
 
-  // 4 5 1 1 2 1 3 1 4 2 4 3 4
-  // 5 5 3 5 4 5 2 1 2 3 4 3 1
+  // 4 5 1  1 2 1 3 1 4 2 4 3 4
+  // 5 5 3  5 4 5 2 1 2 3 4 3 1
   // 1000 1 1000 999 1000
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     V = scanner.nextInt();
-    E = scanner.nextInt();
+
+    int e = scanner.nextInt();
     int start = scanner.nextInt();
 
     graph = new int[V+1][V+1];
     visited = new boolean[V+1];
 
     int x, y;
-    for (int i=1; i<=E; i++) {
+    for (int i = 1; i<= e; i++) {
       x = scanner.nextInt();
       y = scanner.nextInt();
 
