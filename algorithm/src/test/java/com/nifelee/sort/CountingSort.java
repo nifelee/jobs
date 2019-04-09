@@ -86,4 +86,29 @@ public class CountingSort {
     Assertions.assertThat(result).isEqualTo(new int[]{0, 0, 2, 2, 3, 3, 3, 5});
   }
 
+  @Test
+  public void originalSimple() {
+    log.debug("before:{}", arr);
+
+    int max = arr[0];
+    //min, max
+    for (int x : arr) {
+      max = Math.max(max, x);
+    }
+
+    int[] counter = new int[max + 1];
+    for (int x : arr) {
+      counter[x]++;
+    }
+
+    for (int index=0, i=0; i<=max; i++) {
+      for (int j=0; j<counter[i]; j++) {
+        arr[index++] = i;
+      }
+    }
+
+    log.debug("after:{}", arr);
+    Assertions.assertThat(arr).isEqualTo(new int[]{0, 0, 2, 2, 3, 3, 3, 5});
+  }
+
 }

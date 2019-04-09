@@ -34,7 +34,6 @@ public class InsertionSort {
       }
 
       arr[j + 1] = key;
-      log.debug("{} - {}", i, arr);
     }
 
     log.debug("after:{}", arr);

@@ -26,10 +26,10 @@ public class SelectionSort {
   @Test
   public void asc() {
     log.debug("before:{}", arr);
-    int temp;
+    int minIndex, temp;
 
     for (int i = 0; i < arr.length - 1; i++) {
-      int minIndex = i;
+      minIndex = i;
 
       for (int j = i + 1; j < arr.length; j++) {
         if (arr[j] < arr[minIndex]) //최소값

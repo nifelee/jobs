@@ -7,8 +7,8 @@ import org.junit.Test;
 /**
  * 합병 정렬
  * <pre>
- * 1. 리스트의 길이가 0 또는 1이면 이미 정렬된 것으로 본다. 그렇지 않은 경우에는
- * 2. 정렬되지 않은 리스트를 절반으로 잘라 비슷한 크기의 두 부분 리스트로 나눈다.
+ * 1. 리스트의 길이가 0 또는 1이면 이미 정렬된 것으로 본다.
+ * 2. 그렇지 않은 경우에는 정렬되지 않은 리스트를 절반으로 잘라 비슷한 크기의 두 부분 리스트로 나눈다.
  * 3. 각 부분 리스트를 재귀적으로 합병 정렬을 이용해 정렬한다.
  * 4. 두 부분 리스트를 다시 하나의 정렬된 리스트로 합병한다.
  * </pre>
@@ -21,65 +21,51 @@ import org.junit.Test;
 @Slf4j
 public class MergeSort {
 
-  private static final int[] arr = {5, 2, 4, 6, 1, 3};
+  private static final int[] arr = new int[]{5, 2, 4, 6, 1, 3};
 
   @Test
   public void asc() {
     log.debug("before:{}", arr);
 
-    mergeSort(arr);
+    mergeSort(arr, 0, arr.length - 1);
 
     log.debug("after:{}", arr);
     Assertions.assertThat(arr).isEqualTo(new int[]{1, 2, 3, 4, 5, 6});
   }
 
-  private int[] mergeSort(int[] numbers) {
-    int length = numbers.length;
-    if (length == 1) return numbers;
+  private void mergeSort(int[] arr, int left, int right) {
+    if (left < right) {
+      int mid = (left + right) / 2;
 
-    int center = length / 2;
-    int[] leftNumbers = new int[center];
-    int[] rightNumbers = new int[length - center];
+      mergeSort(arr, left, mid);
+      mergeSort(arr, mid + 1, right);
 
-    for (int i = 0; i < center; i++)
-      leftNumbers[i] = numbers[i];
-
-    for (int i = 0; i < length - center; i++)
-      rightNumbers[i] = numbers[center + i];
-
-    leftNumbers = mergeSort(leftNumbers);
-    rightNumbers = mergeSort(rightNumbers);
-
-    return merge(leftNumbers, rightNumbers, numbers);
+      merge(arr, left, mid, right);
+    }
   }
 
-  private int[] merge(int[] leftNumbers, int[] rightNumbers, int[] numbers) {
-    int left = 0, right = 0, merge = 0;
-    while (leftNumbers.length != left && rightNumbers.length != right) {
-      if (leftNumbers[left] < rightNumbers[right]) {
-        numbers[merge] = leftNumbers[left];
-        left++;
-        merge++;
+  private void merge(int[] arr, int left, int mid, int right) {
+    int i = left;
+    int j = mid + 1;
+    int k = left;
+    int[] temp = new int[arr.length];
+
+    while (i <= mid && j <= right) {
+      if (arr[i] < arr[j]) {
+        temp[k++] = arr[i++];
       } else {
-        numbers[merge] = rightNumbers[right];
-        right++;
-        merge++;
+        temp[k++] = arr[j++];
       }
     }
 
-    while (leftNumbers.length != left) {
-      numbers[merge] = leftNumbers[left];
-      left++;
-      merge++;
-    }
+    while (i <= mid)
+      temp[k++] = arr[i++];
 
-    while (rightNumbers.length != right) {
-      numbers[merge] = rightNumbers[right];
-      right++;
-      merge++;
-    }
+    while (j <= right)
+      temp[k++] = arr[j++];
 
-    return numbers;
+    for (int index = left; index < k; index++)
+      arr[index] = temp[index];
   }
 
 }

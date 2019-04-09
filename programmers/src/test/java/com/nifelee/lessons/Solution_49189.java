@@ -14,7 +14,6 @@ import java.util.Queue;
 @Slf4j
 public class Solution_49189 {
 
-
   @Test
   public void test() {
     int n = 6;
