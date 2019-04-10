@@ -26,7 +26,7 @@ public class Boj_1753 {
       for (int i=1; i<=V; i++) {
         graphs[i] = new Graph(i);
       }
-      graphs[1].weight = 0;
+      graphs[K].weight = 0;
 
       for (int i=1; i<=E; i++) {
         int vertex = scanner.nextInt();
