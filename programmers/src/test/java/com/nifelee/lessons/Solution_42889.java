@@ -11,7 +11,6 @@ import java.util.Collections;
 import java.util.List;
 
 @Slf4j
-//TODO : 실패하는 테스트 케이스 찾아서 수정할 것
 public class Solution_42889 {
 
   @Test
