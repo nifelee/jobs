@@ -1,12 +1,14 @@
 package com.nifelee.lessons;
 
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Slf4j
 //TODO : 실패하는 테스트 케이스 찾아서 수정할 것
@@ -41,18 +43,21 @@ public class Solution_42889 {
     log.debug("{}", playingCount);
 
     int playerCount = 0;
-    Set<Stage> set = new TreeSet<>();
+    List<Stage> list = new ArrayList<>();
     for (int i = playingCount.length - 1; i > 0; i--) {
       playerCount += playingCount[i];
 
       if (i <= N)
-        set.add(new Stage(i, playingCount[i], playerCount));
+        list.add(new Stage(i, playingCount[i], playerCount));
     }
-    log.debug("{}", set);
+
+    log.debug("{}", list);
+    Collections.sort(list);
+    log.debug("{}", list);
 
     int index = 0;
-    int[] answer = new int[set.size()];
-    for (Stage stage : set) {
+    int[] answer = new int[list.size()];
+    for (Stage stage : list) {
       answer[index++] = stage.stage;
     }
 
@@ -60,16 +65,17 @@ public class Solution_42889 {
   }
 
   @ToString
+  @EqualsAndHashCode(of = "stage")
   private static class Stage implements Comparable<Stage> {
     final int stage;
-    final int failRate;
+    final double failRate;
 
     int playingCount;
     int playerCount;
 
     Stage(int stage, int playingCount, int playerCount) {
       this.stage = stage;
-      this.failRate = (int) (playingCount / (double) playerCount * 1000);
+      this.failRate = playerCount == 0 ? 0.0 : playingCount / (double) playerCount;
 
       this.playingCount = playingCount;
       this.playerCount = playerCount;
@@ -80,7 +86,12 @@ public class Solution_42889 {
       if (this.failRate == stage.failRate) {
         return this.stage - stage.stage;
       } else {
-        return stage.failRate - this.failRate;
+        if (this.failRate > stage.failRate) {
+          return -1;
+        } else if (this.failRate < stage.failRate) {
+          return 1;
+        }
+        return 0;
       }
     }
   }
