@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * 다익스트라 알고리즘
@@ -40,7 +41,7 @@ public class DijkstraSearch {
     a[2].add(new Edge(4, 5));
     a[3].add(new Edge(4, 6));
 
-    PriorityQueue<Edge> pq = new PriorityQueue<>(); // 우선순위 큐
+    Queue<Edge> pq = new PriorityQueue<>(); // 우선순위 큐
     pq.offer(new Edge(S, 0)); //시작 정점을 우선순위 큐에 넣음.
 
     while (!pq.isEmpty()) {
