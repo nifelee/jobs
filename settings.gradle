@@ -1,3 +1,3 @@
 rootProject.name = 'jobs'
 
-include 'codility', 'boj', 'top-coder', 'programmers', 'algorithm', 'pattern', 'java', 'codingdojang'
+include 'codility', 'boj', 'top-coder', 'programmers', 'algorithm', 'pattern', 'java', 'codingdojang', 'leetcode'
