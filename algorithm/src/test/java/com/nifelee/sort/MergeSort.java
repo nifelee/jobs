@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * 합병 정렬
  * <pre>
@@ -29,6 +31,7 @@ public class MergeSort {
 
     mergeSort(arr, 0, arr.length - 1);
 
+    Arrays.sort(arr);
     log.debug("after:{}", arr);
     Assertions.assertThat(arr).isEqualTo(new int[]{1, 2, 3, 4, 5, 6});
   }

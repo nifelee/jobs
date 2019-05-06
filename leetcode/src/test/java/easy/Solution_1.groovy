@@ -6,14 +6,14 @@ import spock.lang.Unroll
 class Solution_1 extends Specification {
 
   @Unroll
-  def "Brute Force[nums: #nums, target: #target, result: #result"() {
+  def "Brute Force[nums: #nums, target: #target, result: #result]"() {
     expect:
     "Brute Force"(nums, target) == result
 
     where:
-    nums           | target | result
-    [2, 7, 11, 15] as int[] | 9  | [0, 1] as int[]
-    [2, 7, 11, 15] as int[] | 18 | [1, 2] as int[]
+    nums                    | target | result
+    [2, 7, 11, 15] as int[] | 9      | [0, 1] as int[]
+    [2, 7, 11, 15] as int[] | 18     | [1, 2] as int[]
   }
 
   int[] "Brute Force"(int[] nums, int target) {

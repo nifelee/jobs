@@ -15,16 +15,16 @@ public class Scope365 {
 
   @Test
   public void test() {
-    IntStream.rangeClosed(1, 5000)
+    IntStream intStream = IntStream.rangeClosed(1, 5000);
+
+    intStream
         .forEach(this::divideAndSum);
 
-    int sum = 0;
-    for (int i=1; i<5000; i++) {
-      if (!set.contains(i))
-        sum += i;
-    }
+    int sum = intStream
+        .filter(i -> !set.contains(i))
+        .sum();
 
-    log.debug("set : {}", set);
+    //log.debug("set : {}", set);
     log.debug("sum : {}", sum);
   }
 
