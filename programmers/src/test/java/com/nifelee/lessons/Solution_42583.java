@@ -11,6 +11,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+//지나가는 트럭
 //https://programmers.co.kr/learn/courses/30/lessons/42583
 @Slf4j
 public class Solution_42583 {

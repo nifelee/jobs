@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
+//124 나라의 숫자
 //https://programmers.co.kr/learn/courses/30/lessons/12899
 @Slf4j
 public class Solution_12899 {

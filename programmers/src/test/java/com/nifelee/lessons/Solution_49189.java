@@ -10,7 +10,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-//https://programmers.co.kr/learn/courses/30/lessons/49189?language=java
+//가장 먼 노드
+//https://programmers.co.kr/learn/courses/30/lessons/49189
 @Slf4j
 public class Solution_49189 {
 

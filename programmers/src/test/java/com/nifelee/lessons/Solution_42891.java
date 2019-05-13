@@ -10,6 +10,8 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
+//무지의 먹방 라이브 (2018)
+//https://programmers.co.kr/learn/courses/30/lessons/42891
 @Slf4j
 public class Solution_42891 {
 

@@ -6,7 +6,8 @@ import org.junit.Test;
 
 import java.util.TreeMap;
 
-//https://programmers.co.kr/learn/courses/30/lessons/43165?language=java
+//타겟 넘버
+//https://programmers.co.kr/learn/courses/30/lessons/43165
 @Slf4j
 public class Solution_43165 {
 

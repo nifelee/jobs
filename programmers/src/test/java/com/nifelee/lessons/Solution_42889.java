@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+//실패율 (Kakao 2018)
+//https://programmers.co.kr/learn/courses/30/lessons/42889
 @Slf4j
 public class Solution_42889 {
 

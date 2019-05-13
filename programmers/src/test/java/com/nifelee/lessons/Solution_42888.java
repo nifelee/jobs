@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//오픈채팅방 (Kakao 2018)
+//https://programmers.co.kr/learn/courses/30/lessons/42888
 @Slf4j
 public class Solution_42888 {
 

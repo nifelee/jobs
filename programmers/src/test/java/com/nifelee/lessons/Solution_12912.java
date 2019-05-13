@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
+//두 정수 사이의 합
 //https://programmers.co.kr/learn/courses/30/lessons/12912
 @Slf4j
 public class Solution_12912 {

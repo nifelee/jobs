@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+//같은 숫자는 싫어
 //https://programmers.co.kr/learn/courses/30/lessons/12906
 @Slf4j
 public class Solution_12906 {

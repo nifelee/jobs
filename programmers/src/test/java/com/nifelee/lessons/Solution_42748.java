@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+//K번째수
 //https://programmers.co.kr/learn/courses/30/lessons/42748
 @Slf4j
 public class Solution_42748 {

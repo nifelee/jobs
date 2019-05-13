@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+//모의고사
 //https://programmers.co.kr/learn/courses/30/lessons/42840
 @Slf4j
 public class Solution_42840 {
