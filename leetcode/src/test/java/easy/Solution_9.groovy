@@ -22,11 +22,15 @@ class Solution_9 extends Specification {
     if (x < 0 || (x % 10 == 0 && x != 0))
       return false
 
+    print("before x:" + x)
+
     int revertedNumber = 0
     while(x > revertedNumber) {
       revertedNumber = revertedNumber * 10 + x % 10
       x /= 10
     }
+
+    println(", after x:" + x + ", revertedNumber" + revertedNumber)
 
     return x == revertedNumber || x == (revertedNumber/10) as int
   }

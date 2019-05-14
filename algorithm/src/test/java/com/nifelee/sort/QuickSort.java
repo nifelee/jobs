@@ -31,27 +31,26 @@ public class QuickSort {
     Assertions.assertThat(arr).isEqualTo(new int[]{1, 2, 3, 4, 5, 6});
   }
 
-  private int[] quickSort(int[] arr, int begin, int end) {
-    int left = begin;
-    int right = end;
-    int pivot = arr[(begin + end) / 2]; // pivot = length / 2
+  private void quickSort(int[] arr, int left, int right) {
+    int i = left;
+    int j = right;
+    int pivot = arr[(left + right) / 2]; // pivot = length / 2
 
     do {
-      while (arr[left] < pivot) left++;
-      while (arr[right] > pivot) right--;
-      if (left <= right) {
-        int temp = arr[left];
-        arr[left] = arr[right];
-        arr[right] = temp;
-        left++;
-        right--;
+      while (arr[i] < pivot) i++;
+      while (arr[j] > pivot) j--;
+
+      if (i <= j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++;
+        j--;
       }
-    } while (left <= right);
+    } while (i <= j);
 
-    if (begin < right) quickSort(arr, begin, right);
-    if (end > left) quickSort(arr, left, end);
-
-    return arr;
+    if (left < j) quickSort(arr, left, j);
+    if (right > i) quickSort(arr, i, right);
   }
 
 }
