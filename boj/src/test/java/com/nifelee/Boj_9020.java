@@ -8,6 +8,7 @@ import org.junit.Test;
  * 골드바흐의 추측 : 2보다 큰 모든 짝수는 두 개의 소수(Prime number)의 합으로 표시할 수 있다
  * e.g. 4 = 2 + 2, 6 = 3 + 3, 8 = 3 + 5, 10 = 5 + 5, 12 = 5 + 7, 14 = 3 + 11, 14 = 7 + 7
  */
+//https://www.acmicpc.net/problem/9020
 @Slf4j
 public class Boj_9020 {
 

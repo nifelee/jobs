@@ -11,6 +11,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Scanner;
 
+//https://www.acmicpc.net/problem/1753
 @Slf4j
 public class Boj_1753 {
 

@@ -2,6 +2,7 @@ package com.nifelee;
 
 import java.util.Scanner;
 
+//https://www.acmicpc.net/problem/1003
 public class Boj_1003 {
 
   public static void main(String[] args) {

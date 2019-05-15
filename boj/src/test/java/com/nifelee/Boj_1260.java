@@ -20,6 +20,7 @@ import java.util.Scanner;
  * 그 다음 줄에는 BFS를 수행한 결과를 출력한다.
  * V부터 방문된 점을 순서대로 출력하면 된다.
  */
+//https://www.acmicpc.net/problem/1260
 @Slf4j
 public class Boj_1260 {
 

@@ -6,6 +6,8 @@ import org.junit.Test;
 /**
  * 깊이 우선 탐색 (DFS)
  * - 특정 노드를 출발하여 깊게 들어 갈 수 있을때 까지 들어가고 들어 갈 곳이 없다면 다시 나오는 알고리즘
+ * : 일반적으로 Stack을 사용하여 탐색
+ * : 시간/순서
  *
  * https://ggmouse.tistory.com/312
  */

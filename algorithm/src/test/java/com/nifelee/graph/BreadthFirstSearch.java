@@ -6,6 +6,8 @@ import org.junit.Test;
 /**
  * 넓이 우선 탐색 (BFS)
  * - 시작 정점을 방문한 후 시작 정점에 인접한 모든 정점들을 우선 방문하는 방법
+ * : 일반적으로 Queue를 사용하여 탐색
+ * : 거리
  *
  * https://ggmouse.tistory.com/312
  * https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
